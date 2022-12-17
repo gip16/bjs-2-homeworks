@@ -15,9 +15,8 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   if (isNaN(percent) || isNaN(contribution) || isNaN(amount) || isNaN(countMonths)) {
     return false
   }
-  Number(percent, contribution, amount, countMonths);
 
-  let monthlyPercent = percent / 100 / countMonths;
+  let monthlyPercent = percent / 100 / 12;
   let loanBody = amount - contribution;
   let monthlyPayment = loanBody * (monthlyPercent + (monthlyPercent / (Math.pow((1 + monthlyPercent), countMonths) - 1)));
   let fullPayment = monthlyPayment * countMonths;
