@@ -19,8 +19,7 @@ function summElementsWorker(...arr) {
   if (arr.length === 0) {
     return 0;
   }
-  const sum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-  return sum;
+  return arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 }
 
 function differenceMaxMinWorker(...arr) {
@@ -71,4 +70,8 @@ function makeWork (arrOfArr, func) {
     }
   }
   return maxWorkerResult;
+}
+
+function makeWork2 (arrOfArr, func) {
+  return Math.max(...arrOfArr.map(arr => func(arr)));
 }
