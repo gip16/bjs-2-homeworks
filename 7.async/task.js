@@ -58,19 +58,3 @@ class AlarmClock {
     this.alarmCollection = [];
   }
 }
-
-const clock = new AlarmClock();
-
-// clock.addClock("16:45", f => f);
-// clock.addClock("16:45", f => f);
-// clock.addClock("16:45", f => f);
-// console.log(clock.alarmCollection.length);
-
-// clock.clearAlarms();
-// console.log(clock.alarmCollection.length);
-
-clock.addClock("16:45", f => f);
-clock.addClock("16:46", f => f);
-clock.removeClock("16:45");
-console.log(clock.alarmCollection.length);
-console.log(clock.alarmCollection);
